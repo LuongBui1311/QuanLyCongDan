@@ -144,5 +144,52 @@ namespace QuanLyCongDan
                 }
             }
         }
+
+        private void btn_Them_Tamtru_Click(object sender, RoutedEventArgs e)
+        {
+            TamTru tamTru = new TamTru(Convert.ToDateTime(dtp_tamtru_ngaydk.Text.Trim()).Date, txt_tamtru_noidk.Text, txt_tamtru_hoten.Text, Convert.ToDateTime(dtp_tamtru_ngaysinh.Text.Trim()).Date, txt_tamtru_cccd.Text, txt_tamtru_noicapcccd.Text,
+                                        Convert.ToDateTime(dtp_tamtru_ngaycapcccd.Text.Trim()).Date, txt_tamtru_diachitht.Text, txt_tamtru_diachitt.Text, Convert.ToDateTime(dtp_tamtru_ngayden.Text.Trim()).Date, Convert.ToDateTime(dtp_tamtru_ngaydi.Text.Trim()).Date, txt_tamtru_lydo.Text);
+            cdDao.ThemThongTinTamTru(tamTru);
+            dtg_Tamtru_Loaded(sender, e);
+        }
+
+        private void dtg_Tamtru_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dtg_Tamtru.SelectedIndex.ToString() != null)
+            {
+                DataRowView rowView = (DataRowView)dtg_Tamtru.SelectedItem;
+                if (rowView != null)
+                {
+                    dtp_tamtru_ngaydk.Text = rowView[0].ToString();
+                    txt_tamtru_noidk.Text = rowView[1].ToString();
+                    txt_tamtru_hoten.Text = rowView[2].ToString();
+                    dtp_tamtru_ngaysinh.Text = rowView[3].ToString();
+                    txt_tamtru_cccd.Text = rowView[4].ToString();
+                    txt_tamtru_noicapcccd.Text = rowView[5].ToString();
+                    dtp_tamtru_ngaycapcccd.Text = rowView[6].ToString();
+                    txt_tamtru_diachitht.Text = rowView[7].ToString();
+                    txt_tamtru_diachitt.Text = rowView[8].ToString();
+                    dtp_tamtru_ngayden.Text = rowView[9].ToString();
+                    dtp_tamtru_ngaydi.Text = rowView[10].ToString();
+                    txt_tamtru_lydo.Text = rowView[11].ToString();
+                }
+            }
+        }
+
+        private void btn_Xoa_Tamtru_Click(object sender, RoutedEventArgs e)
+        {
+            TamTru tamTru = new TamTru(Convert.ToDateTime(dtp_tamtru_ngaydk.Text.Trim()).Date, txt_tamtru_noidk.Text, txt_tamtru_hoten.Text, Convert.ToDateTime(dtp_tamtru_ngaysinh.Text.Trim()).Date, txt_tamtru_cccd.Text, txt_tamtru_noicapcccd.Text,
+                                        Convert.ToDateTime(dtp_tamtru_ngaycapcccd.Text.Trim()).Date, txt_tamtru_diachitht.Text, txt_tamtru_diachitt.Text, Convert.ToDateTime(dtp_tamtru_ngayden.Text.Trim()).Date, Convert.ToDateTime(dtp_tamtru_ngaydi.Text.Trim()).Date, txt_tamtru_lydo.Text);
+            cdDao.XoaThongTinTamTru(tamTru);
+            dtg_Tamtru_Loaded(sender, e);
+        }
+
+        private void btn_Sua_Tamtru_Click(object sender, RoutedEventArgs e)
+        {
+            TamTru tamTru = new TamTru(Convert.ToDateTime(dtp_tamtru_ngaydk.Text.Trim()).Date, txt_tamtru_noidk.Text, txt_tamtru_hoten.Text, Convert.ToDateTime(dtp_tamtru_ngaysinh.Text.Trim()).Date, txt_tamtru_cccd.Text, txt_tamtru_noicapcccd.Text,
+                                        Convert.ToDateTime(dtp_tamtru_ngaycapcccd.Text.Trim()).Date, txt_tamtru_diachitht.Text, txt_tamtru_diachitt.Text, Convert.ToDateTime(dtp_tamtru_ngayden.Text.Trim()).Date, Convert.ToDateTime(dtp_tamtru_ngaydi.Text.Trim()).Date, txt_tamtru_lydo.Text);
+            cdDao.SuaThongTinTamTru(tamTru);
+            dtg_Tamtru_Loaded(sender, e);
+        }
     }
 }

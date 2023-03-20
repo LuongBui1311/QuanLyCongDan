@@ -26,7 +26,7 @@
                         Margin="50 0 0 0">
 
                 <WrapPanel>
-                    <Image Source="/Images/Bản sao của logo_MFIT.png" 
+                    <Image Source="Images/Bản sao của logo_MFIT.png" 
                            HorizontalAlignment="Left" Height="50" Width="50"></Image>
                     <TextBlock Text="CodeCraks" FontSize="28" FontWeight="Bold"
                                HorizontalAlignment="Left" VerticalAlignment="Center"
@@ -42,7 +42,7 @@
 
             <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                         Height="320" Width="320">
-                <Image Source="/Images/11525709_4776016.jpg"></Image>
+                <Image Source="Images/11525709_4776016.jpg"></Image>
 
             </StackPanel>
 

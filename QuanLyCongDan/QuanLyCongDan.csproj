@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\11525709_4776016.jpg" />
+    <None Remove="Images\Bản sao của logo_MFIT.png" />
+    <None Remove="Images\Screenshot_20221028_025259.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="4.8.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
@@ -28,8 +34,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
     <Folder Include="SQL\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\11525709_4776016.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Bản sao của logo_MFIT.png" />
+    <Resource Include="Images\Screenshot_20221028_025259.png" />
   </ItemGroup>
 
 </Project>
