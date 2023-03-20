@@ -77,5 +77,25 @@ namespace QuanLyCongDan.DBClass
                                             ttThue.Tenguoinopthue, ttThue.Coquanthue, ttThue.SoCMT_CCCD, ttThue.Ngaythaydoithongtingannhat, ttThue.Masothue);
             dbc.Sql_Them_Xoa_Sua(sqlStr);
         }
+        public void ThemThongTinTamTru(TamTru tamTru)
+        {
+            string sqlStr = string.Format("INSERT INTO Tamtru(Ngaydk, Noidk, Hoten, Ngaysinh, Cmnd, Nccmnd, Ngccmnd, Diachitht, Diachitt, Ngayden, Ngaydi, Lydo) VALUES " +
+                "('{0}', N'{1}', N'{2}', '{3}', '{4}', N'{5}', '{6}', N'{7}', N'{8}', '{9}', '{10}', N'{11}')",
+                tamTru.Ngaydk, tamTru.Noidk, tamTru.Hoten, tamTru.Ngaysinh, tamTru.CCCD, tamTru.Noicapcccd, tamTru.Ngaycapcccd, tamTru.Diachitht, tamTru.Diachitt, tamTru.Ngayden, tamTru.Ngaydi, tamTru.Lydo);
+            dbc.Sql_Them_Xoa_Sua(sqlStr);
+        }
+
+        public void XoaThongTinTamTru(TamTru tamTru)
+        {
+            string sqlStr = string.Format("DELETE FROM Tamtru WHERE Cmnd = '{0}'", tamTru.CCCD);
+            dbc.Sql_Them_Xoa_Sua(sqlStr);
+        }
+
+        public void SuaThongTinTamTru(TamTru tamTru)
+        {
+            string sqlStr = string.Format("UPDATE Tamtru SET Ngaydk = '{0}', Noidk = N'{1}', Hoten = N'{2}', Ngaysinh = '{3}', Nccmnd = N'{4}', Ngccmnd = '{5}', Diachitht = N'{6}', Diachitt = N'{7}', Ngayden = '{8}', Ngaydi = '{9}', Lydo = N'{10}' WHERE Cmnd = '{11}'",
+                tamTru.Ngaydk, tamTru.Noidk, tamTru.Hoten, tamTru.Hoten, tamTru.Ngaysinh, tamTru.Noicapcccd, tamTru.Ngaycapcccd, tamTru.Diachitht, tamTru.Diachitt, tamTru.Ngayden, tamTru.Ngaydi, tamTru.Lydo, tamTru.CCCD);
+            dbc.Sql_Them_Xoa_Sua(sqlStr);
+        }
     }
 }
