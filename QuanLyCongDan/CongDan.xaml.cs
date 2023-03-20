@@ -63,7 +63,7 @@ namespace QuanLyCongDan
         {
             ThongTinCongDan congDan = new ThongTinCongDan(txt_tt_hoten.Text, txt_tt_gioitinh.Text, txt_tt_cccd.Text, Convert.ToDateTime(dtp_tt_ngaysinh.Text.Trim()).Date, txt_tt_noisinh.Text, txt_tt_honnhan.Text, txt_tt_quoctich.Text,
                 txt_tt_dantoc.Text, txt_tt_tongiao.Text, txt_tt_thuongtru.Text, txt_tt_quequan.Text, txt_tt_diachi.Text, txt_tt_sdt.Text, txt_tt_email.Text);
-            cdDao.ThemThongTin(congDan);
+            cdDao.ThemThongTinCongDan(congDan);
             dtg_ThongTin_Loaded(sender, e);
         }
 
@@ -96,7 +96,7 @@ namespace QuanLyCongDan
         {
             ThongTinCongDan congDan = new ThongTinCongDan(txt_tt_hoten.Text, txt_tt_gioitinh.Text, txt_tt_cccd.Text, Convert.ToDateTime(dtp_tt_ngaysinh.Text.Trim()).Date, txt_tt_noisinh.Text, txt_tt_honnhan.Text, txt_tt_quoctich.Text,
                 txt_tt_dantoc.Text, txt_tt_tongiao.Text, txt_tt_thuongtru.Text, txt_tt_quequan.Text, txt_tt_diachi.Text, txt_tt_sdt.Text, txt_tt_email.Text);
-            cdDao.XoaThongTin(congDan);
+            cdDao.XoaThongTinCongDan(congDan);
             dtg_ThongTin_Loaded(sender, e);
         }
 
@@ -104,8 +104,45 @@ namespace QuanLyCongDan
         {
             ThongTinCongDan congDan = new ThongTinCongDan(txt_tt_hoten.Text, txt_tt_gioitinh.Text, txt_tt_cccd.Text, Convert.ToDateTime(dtp_tt_ngaysinh.Text.Trim()).Date, txt_tt_noisinh.Text, txt_tt_honnhan.Text, txt_tt_quoctich.Text,
                 txt_tt_dantoc.Text, txt_tt_tongiao.Text, txt_tt_thuongtru.Text, txt_tt_quequan.Text, txt_tt_diachi.Text, txt_tt_sdt.Text, txt_tt_email.Text);
-            cdDao.SuaThongTin(congDan);
+            cdDao.SuaThongTinCongDan(congDan);
             dtg_ThongTin_Loaded(sender, e);
+        }
+
+        private void btn_Them_Thue_Click(object sender, RoutedEventArgs e)
+        {
+            Thue ttThue = new Thue(txt_thue_masothue.Text, txt_thue_nguoinopthue.Text, txt_thue_coquanthue.Text, txt_thue_cccd.Text, Convert.ToDateTime(dtp_thue_ngaythaydoi.Text.Trim()).Date);
+            cdDao.ThemThongTinThue(ttThue);
+            dtg_Thue_Loaded(sender, e);
+        }
+
+        private void btn_Xoa_Thue_Click(object sender, RoutedEventArgs e)
+        {
+            Thue ttThue = new Thue(txt_thue_masothue.Text, txt_thue_nguoinopthue.Text, txt_thue_coquanthue.Text, txt_thue_cccd.Text, Convert.ToDateTime(dtp_thue_ngaythaydoi.Text.Trim()).Date);
+            cdDao.XoaThongTinThue(ttThue);
+            dtg_Thue_Loaded(sender, e);
+        }
+
+        private void btn_Sua_Thue_Click(object sender, RoutedEventArgs e)
+        {
+            Thue ttThue = new Thue(txt_thue_masothue.Text, txt_thue_nguoinopthue.Text, txt_thue_coquanthue.Text, txt_thue_cccd.Text, Convert.ToDateTime(dtp_thue_ngaythaydoi.Text.Trim()).Date);
+            cdDao.SuaThongTinThue(ttThue);
+            dtg_Thue_Loaded(sender, e);
+        }
+
+        private void dtg_Thue_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dtg_Thue.SelectedIndex.ToString() != null)
+            {
+                DataRowView rowView = (DataRowView)dtg_Thue.SelectedItem;
+                if (rowView != null)
+                {
+                    txt_thue_masothue.Text = rowView[0].ToString();
+                    txt_thue_nguoinopthue.Text = rowView[1].ToString();
+                    txt_thue_coquanthue.Text = rowView[2].ToString();
+                    txt_thue_cccd.Text = rowView[3].ToString();
+                    dtp_thue_ngaythaydoi.Text = rowView[4].ToString();
+                }
+            }
         }
     }
 }
