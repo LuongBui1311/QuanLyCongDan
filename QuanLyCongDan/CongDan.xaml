@@ -258,40 +258,40 @@
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
                             <WrapPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0 10 0 0">
-                                <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày đăng kí" Width="150"
+                                <DatePicker x:Name="dtp_tamtru_ngaydk" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày đăng kí" Width="150"
                                             BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
 
                                 </DatePicker>
-                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamtru_noidk" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Nơi đăng kí" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamtru_hoten" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Họ và tên" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày sinh" Width="150"
+                                <DatePicker x:Name="dtp_tamtru_ngaysinh" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày sinh" Width="150"
                                             BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
 
                                 </DatePicker>
-                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamtru_cccd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="CMND/CCCD" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamtru_noicapcccd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Nơi cấp CMND/CCCD" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày cấp CMND/CCCD" Width="150"
+                                <DatePicker x:Name="dtp_tamtru_ngaycapcccd" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày cấp CMND/CCCD" Width="150"
                                             BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
 
                                 </DatePicker>
-                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamtru_diachitht" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Địa chỉ thường trú" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamtru_diachitt" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Địa chỉ tạm trú" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày đến" Width="120"
+                                <DatePicker x:Name="dtp_tamtru_ngayden" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày đến" Width="120"
                                             BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
 
                                 </DatePicker>
-                                <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày đi" Width="120"
+                                <DatePicker x:Name="dtp_tamtru_ngaydi" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày đi" Width="120"
                                             BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
 
                                 </DatePicker>
-                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="250" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
-                                         materialDesign:HintAssist.Hint="Lí do" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
+                                <TextBox x:Name="txt_tamtru_lydo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="250" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                         materialDesign:HintAssist.Hint="Lý do" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                             </WrapPanel>
                             <DataGrid Grid.Row="1" x:Name="dtg_Tamtru" Loaded="dtg_Tamtru_Loaded" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False">
                                 <DataGrid.Columns>
