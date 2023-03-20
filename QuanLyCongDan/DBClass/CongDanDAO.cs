@@ -73,7 +73,7 @@ namespace QuanLyCongDan.DBClass
         }
         public void SuaThongTinThue(Thue ttThue)
         {
-            string sqlStr = string.Format("UPDATE Thue SET Tennguoinopthue = N'{0}', Coquanthue = N'{1}', SoCMT_CCCD = '{2}', Ngaythaydoithongtingannhat = N'{3}' WHERE Masothue = '{4}'",
+            string sqlStr = string.Format("UPDATE Thue SET Tennguoinopthue = N'{0}', Coquanthue = N'{1}', SoCMT_CCCD = '{2}', Ngaythaydoithongtingannhat = '{3}' WHERE Masothue = '{4}'",
                                             ttThue.Tenguoinopthue, ttThue.Coquanthue, ttThue.SoCMT_CCCD, ttThue.Ngaythaydoithongtingannhat, ttThue.Masothue);
             dbc.Sql_Them_Xoa_Sua(sqlStr);
         }
@@ -94,7 +94,7 @@ namespace QuanLyCongDan.DBClass
         public void SuaThongTinTamTru(TamTru tamTru)
         {
             string sqlStr = string.Format("UPDATE Tamtru SET Ngaydk = '{0}', Noidk = N'{1}', Hoten = N'{2}', Ngaysinh = '{3}', Nccmnd = N'{4}', Ngccmnd = '{5}', Diachitht = N'{6}', Diachitt = N'{7}', Ngayden = '{8}', Ngaydi = '{9}', Lydo = N'{10}' WHERE Cmnd = '{11}'",
-                tamTru.Ngaydk, tamTru.Noidk, tamTru.Hoten, tamTru.Hoten, tamTru.Ngaysinh, tamTru.Noicapcccd, tamTru.Ngaycapcccd, tamTru.Diachitht, tamTru.Diachitt, tamTru.Ngayden, tamTru.Ngaydi, tamTru.Lydo, tamTru.CCCD);
+                tamTru.Ngaydk, tamTru.Noidk, tamTru.Hoten, tamTru.Ngaysinh, tamTru.Noicapcccd, tamTru.Ngaycapcccd, tamTru.Diachitht, tamTru.Diachitt, tamTru.Ngayden, tamTru.Ngaydi, tamTru.Lydo, tamTru.CCCD);
             dbc.Sql_Them_Xoa_Sua(sqlStr);
         }
     }
