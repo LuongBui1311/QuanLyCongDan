@@ -610,19 +610,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\2year\\HK2\\WIPR\\QuanLyCongDan\\QuanLyCongDan\\QuanLyCongDan.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Downloads\\WPF\\QuanLyCongDan\\QuanLyCongDan.csproj",
       "projectName": "QuanLyCongDan",
-      "projectPath": "D:\\2year\\HK2\\WIPR\\QuanLyCongDan\\QuanLyCongDan\\QuanLyCongDan.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\2year\\HK2\\WIPR\\QuanLyCongDan\\QuanLyCongDan\\obj\\",
+      "projectPath": "C:\\Users\\ADMIN\\Downloads\\WPF\\QuanLyCongDan\\QuanLyCongDan.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ADMIN\\Downloads\\WPF\\QuanLyCongDan\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -676,7 +676,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

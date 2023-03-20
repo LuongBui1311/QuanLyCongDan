@@ -123,17 +123,17 @@
                                          materialDesign:HintAssist.Hint="Họ và tên" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                                 <TextBox x:Name="txt_tt_gioitinh" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Giới tính" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
-                                <TextBox x:Name="txt_tt_cccd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_cccd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="210" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="CCCD" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
                                 <DatePicker x:Name="dtp_tt_ngaysinh" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày sinh" Width="150"
                                             BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
-                                   
+
                                 </DatePicker>
                                 <TextBox x:Name="txt_tt_noisinh" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Nơi sinh" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
-                                <TextBox x:Name="txt_tt_honnhan" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_honnhan" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="95" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Hôn nhân" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
-                                <TextBox x:Name="txt_tt_quoctich" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_quoctich" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="95" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Quốc tịch" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
                                 <TextBox x:Name="txt_tt_dantoc" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Dân tộc" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
@@ -141,7 +141,7 @@
                                          materialDesign:HintAssist.Hint="Tôn giáo" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
                                 <TextBox x:Name="txt_tt_thuongtru" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Thường trú" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
-                                <TextBox x:Name="txt_tt_quequan" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_quequan" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="150" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Quê quán" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
                                 <TextBox x:Name="txt_tt_diachi" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Địa chỉ" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
@@ -152,10 +152,10 @@
                             </WrapPanel>
                             <DataGrid Grid.Row="1" x:Name="dtg_ThongTin" AutoGenerateColumns="False" CanUserAddRows="True" CanUserReorderColumns="False" Loaded="dtg_ThongTin_Loaded" SelectionChanged="dtg_ThongTin_SelectionChanged">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Binding="{Binding HoTen}" Width="auto" Header="Họ và tên"/>
+                                    <DataGridTextColumn Binding="{Binding HoTen}" Width="150" Header="Họ và tên"/>
                                     <DataGridTextColumn Binding="{Binding GioiTinh}" Width="auto" Header="Giới tính"/>
                                     <DataGridTextColumn Binding="{Binding CCCD}" Width="auto" Header="CCCD"/>
-                                    <DataGridTextColumn Binding="{Binding NgaySinh}" Width="auto" Header="Ngày sinh"/>
+                                    <DataGridTextColumn Binding="{Binding NgaySinh,StringFormat=d}" Width="auto" Header="Ngày sinh"/>
                                     <DataGridTextColumn Binding="{Binding NoiSinh}" Width="auto" Header="Nơi sinh"/>
                                     <DataGridTextColumn Binding="{Binding HonNhan}" Width="auto" Header="Tình trang hôn nhân"/>
                                     <DataGridTextColumn Binding="{Binding QuocTich}" Width="auto" Header="Quốc tịch"/>
@@ -201,8 +201,8 @@
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
-                            <WrapPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0 10 0 0">
-                                <TextBox x:Name="txt_thue_masothue" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                            <WrapPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,5,0,5" Width="840">
+                                <TextBox x:Name="txt_thue_masothue" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="150" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Mã số thuế" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                                 <TextBox x:Name="txt_thue_nguoinopthue" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Tên người nộp thuế" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
@@ -221,7 +221,7 @@
                                     <DataGridTextColumn Binding="{Binding Tennguoinopthue}" Width="*" Header="Tên người nộp thuế"/>
                                     <DataGridTextColumn Binding="{Binding Coquanthue}" Width="*" Header="Cơ quan thuế"/>
                                     <DataGridTextColumn Binding="{Binding SoCMT_CCCD}" Width="*" Header="Số CMT/CCCD"/>
-                                    <DataGridTextColumn Binding="{Binding Ngaythaydoithongtingannhat}" Width="*" Header="Ngày thay đổi thông tin gần nhất"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaythaydoithongtingannhat, StringFormat=d}" Width="*" Header="Ngày thay đổi thông tin gần nhất"/>
                                 </DataGrid.Columns>
                             </DataGrid>
                             <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left">
@@ -295,17 +295,17 @@
                             </WrapPanel>
                             <DataGrid Grid.Row="1" x:Name="dtg_Tamtru" Loaded="dtg_Tamtru_Loaded" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" SelectionChanged="dtg_Tamtru_SelectionChanged">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Binding="{Binding Ngaydk}" Width="auto" Header="Ngày đăng kí"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaydk, StringFormat=d}" Width="auto" Header="Ngày đăng kí"/>
                                     <DataGridTextColumn Binding="{Binding Noidk}" Width="auto" Header="Nơi đăng kí"/>
                                     <DataGridTextColumn Binding="{Binding Hoten}" Width="auto" Header="Họ và Tên"/>
-                                    <DataGridTextColumn Binding="{Binding Ngaysinh}" Width="auto" Header="Ngày sinh"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaysinh, StringFormat=d}" Width="auto" Header="Ngày sinh"/>
                                     <DataGridTextColumn Binding="{Binding Cmnd}" Width="auto" Header="CMND"/>
                                     <DataGridTextColumn Binding="{Binding Nccmnd}" Width="auto" Header="Nơi cấp CMND"/>
-                                    <DataGridTextColumn Binding="{Binding Ngccmnd}" Width="auto" Header="Ngày cấp CMND"/>
+                                    <DataGridTextColumn Binding="{Binding Ngccmnd, StringFormat=d}" Width="auto" Header="Ngày cấp CMND"/>
                                     <DataGridTextColumn Binding="{Binding Diachitht}" Width="auto" Header="Địa chỉ thường trú"/>
                                     <DataGridTextColumn Binding="{Binding Diachitt}" Width="auto" Header="Địa chỉ tạm trú"/>
-                                    <DataGridTextColumn Binding="{Binding Ngayden}" Width="auto" Header="Ngày đến"/>
-                                    <DataGridTextColumn Binding="{Binding Ngaydi}" Width="auto" Header="Ngày đi"/>
+                                    <DataGridTextColumn Binding="{Binding Ngayden, StringFormat=d}" Width="auto" Header="Ngày đến"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaydi, StringFormat=d}" Width="auto" Header="Ngày đi"/>
                                     <DataGridTextColumn Binding="{Binding Lydo}" Width="auto" Header="Lý do"/>
                                 </DataGrid.Columns>
                             </DataGrid>
@@ -337,22 +337,26 @@
                     </TabItem>
                     <TabItem Header="Tạm vắng" Width="auto" Height="45">
                         <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="409*"/>
+                                <ColumnDefinition Width="21*"/>
+                            </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="auto"/>
-                                </Grid.RowDefinitions>
-                            <WrapPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0 10 0 0">
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <WrapPanel Grid.Row="0" HorizontalAlignment="Left" Margin="5,10,0,1" Grid.ColumnSpan="2">
                                 <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Nơi chuyển đi" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                                 <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Nơi chuyển đến" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Họ và tên" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                    <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày sinh" Width="150"
+                                <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày sinh" Width="150"
                                             BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
 
-                                    </DatePicker>
+                                </DatePicker>
                                 <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="CMND/CCCD" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                                 <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
@@ -363,36 +367,36 @@
                                 </DatePicker>
                                 <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Địa chỉ thường trú" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Địa chỉ tạm trú" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                    <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày đi" Width="120"
+                                <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày đi" Width="120"
                                             BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
 
-                                    </DatePicker>
-                                    <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày về" Width="120"
+                                </DatePicker>
+                                <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày về" Width="120"
                                             BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
 
-                                    </DatePicker>
-                                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="250" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                </DatePicker>
+                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="250" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Lí do" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                </WrapPanel>
-                                <DataGrid Grid.Row="1" x:Name="dtg_Tamvang" AutoGenerateColumns="False" CanUserAddRows="False" Loaded="dtg_Tamvang_Loaded" CanUserReorderColumns="False">
+                            </WrapPanel>
+                            <DataGrid x:Name="dtg_Tamvang" AutoGenerateColumns="False" CanUserAddRows="False" Loaded="dtg_Tamvang_Loaded" CanUserReorderColumns="False" Grid.ColumnSpan="2" Margin="0,183,0,0" Grid.RowSpan="2">
                                 <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding Hoten}" Width="auto" Header="Họ và Tên"/>
                                     <DataGridTextColumn Binding="{Binding Ncdi}" Width="auto" Header="Nơi chuyển đi"/>
                                     <DataGridTextColumn Binding="{Binding Ncden}" Width="auto" Header="Nơi chuyển đến"/>
-                                    <DataGridTextColumn Binding="{Binding Hoten}" Width="auto" Header="Họ và Tên"/>
-                                    <DataGridTextColumn Binding="{Binding Ngaysinh}" Width="auto" Header="Ngày sinh"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaysinh, StringFormat=d}" Width="auto" Header="Ngày sinh"/>
                                     <DataGridTextColumn Binding="{Binding Cmnd}" Width="auto" Header="CMND"/>
                                     <DataGridTextColumn Binding="{Binding Nccmnd}" Width="auto" Header="Nơi cấp CMND"/>
-                                    <DataGridTextColumn Binding="{Binding Ngccmnd}" Width="auto" Header="Ngày cấp CMND"/>
+                                    <DataGridTextColumn Binding="{Binding Ngccmnd, StringFormat=d}" Width="auto" Header="Ngày cấp CMND"/>
                                     <DataGridTextColumn Binding="{Binding Diachitht}" Width="auto" Header="Địa chỉ thường trú"/>
                                     <DataGridTextColumn Binding="{Binding Diachitt}" Width="auto" Header="Địa chỉ tạm trú"/>
-                                    <DataGridTextColumn Binding="{Binding Ngaydi}" Width="auto" Header="Ngày đi"/>
-                                    <DataGridTextColumn Binding="{Binding Ngayve}" Width="auto" Header="Ngày về"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaydi, StringFormat=d}" Width="auto" Header="Ngày đi"/>
+                                    <DataGridTextColumn Binding="{Binding Ngayve, StringFormat=d}" Width="auto" Header="Ngày về"/>
                                     <DataGridTextColumn Binding="{Binding Lydo}" Width="auto" Header="Lý do"/>
                                 </DataGrid.Columns>
                             </DataGrid>
-                            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left">
+                            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,309,0,0" Grid.RowSpan="2">
                                 <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
                                     Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13" Click="btn_Them_ThongTin_Click">
                                     <StackPanel Orientation="Horizontal">
@@ -460,24 +464,24 @@
                                             BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
 
                                 </DatePicker>
-                                
-                                </WrapPanel>
+
+                            </WrapPanel>
                             <DataGrid Grid.Row="1" x:Name="dtg_Cnkh" Loaded="dtg_Cnkh_Loaded" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Binding="{Binding Hotenvo}" Width="auto" Header="Họ tên vợ"/>
-                                    <DataGridTextColumn Binding="{Binding Ngaysinhvo}" Width="auto" Header="Ngày sinh vợ"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaysinhvo, StringFormat=d}" Width="auto" Header="Ngày sinh vợ"/>
                                     <DataGridTextColumn Binding="{Binding Dantocvo}" Width="auto" Header="Dân tộc vợ"/>
                                     <DataGridTextColumn Binding="{Binding Quoctichvo}" Width="auto" Header="Quốc tịch vợ"/>
                                     <DataGridTextColumn Binding="{Binding Noicutruvo}" Width="auto" Header="Nơi cư trú vợ"/>
                                     <DataGridTextColumn Binding="{Binding Giaytotuythanvo}" Width="auto" Header="Giấy tờ tùy thân vợ"/>
                                     <DataGridTextColumn Binding="{Binding Hotenchong}" Width="auto" Header="Họ tên chồng"/>
-                                    <DataGridTextColumn Binding="{Binding Ngaysinhchong}" Width="auto" Header="Ngày sinh chồng"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaysinhchong, StringFormat=d}" Width="auto" Header="Ngày sinh chồng"/>
                                     <DataGridTextColumn Binding="{Binding Dantocchong}" Width="auto" Header="Dân tộc chồng"/>
                                     <DataGridTextColumn Binding="{Binding Quoctichchong}" Width="auto" Header="Quốc tịch chồng"/>
                                     <DataGridTextColumn Binding="{Binding Noicutruchong}" Width="auto" Header="Nơi cư trú chồng"/>
                                     <DataGridTextColumn Binding="{Binding Giaytotuythanchong}" Width="auto" Header="Giấy tờ tùy thân chồng"/>
                                     <DataGridTextColumn Binding="{Binding Noidk}" Width="auto" Header="Nơi đăng kí"/>
-                                    <DataGridTextColumn Binding="{Binding Ngaydk}" Width="auto" Header="Ngày đăng kí"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaydk, StringFormat=d}" Width="auto" Header="Ngày đăng kí"/>
                                 </DataGrid.Columns>
                             </DataGrid>
                             <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left">
