@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -95,6 +96,50 @@ namespace QuanLyCongDan.DBClass
         {
             string sqlStr = string.Format("UPDATE Tamtru SET Ngaydk = '{0}', Noidk = N'{1}', Hoten = N'{2}', Ngaysinh = '{3}', Nccmnd = N'{4}', Ngccmnd = '{5}', Diachitht = N'{6}', Diachitt = N'{7}', Ngayden = '{8}', Ngaydi = '{9}', Lydo = N'{10}' WHERE Cmnd = '{11}'",
                 tamTru.Ngaydk, tamTru.Noidk, tamTru.Hoten, tamTru.Ngaysinh, tamTru.Noicapcccd, tamTru.Ngaycapcccd, tamTru.Diachitht, tamTru.Diachitt, tamTru.Ngayden, tamTru.Ngaydi, tamTru.Lydo, tamTru.CCCD);
+            dbc.Sql_Them_Xoa_Sua(sqlStr);
+        }
+
+        public void ThemThongTinTamVang(TamVang tamvang)
+        {
+            string sqlStr = string.Format("INSERT INTO TamVang(Ncdi, Ncden, Hoten, Ngaysinh, Cmnd, NcCmnd, NgcCmnd, DiaChitht, DiaChitt, Ngaydi, Ngayve, Lydo) VALUES " +
+                " (N'{0}', N'{1}', N'{2}', '{3}', N'{4}', N'{5}', '{6}', N'{7}', N'{8}', '{9}', '{10}', N'{11}')",
+                tamvang.noichuyendi, tamvang.noichyenden, tamvang.hovaten, tamvang.ngaysinh, tamvang.CMND, tamvang.noicapCMND, tamvang.ngaycapCMND,
+                tamvang.diachithuongtru, tamvang.diachitamtru, tamvang.ngaydi, tamvang.ngayve, tamvang.lydo);
+            dbc.Sql_Them_Xoa_Sua(sqlStr);
+        }
+        public void XoaThongTinTamVang(TamVang tamvang)
+        {
+            string sqlStr = string.Format("DELETE FROM TAMVANG WHERE Cmnd = {0}", tamvang.CMND);
+            dbc.Sql_Them_Xoa_Sua(sqlStr);
+        }
+        public void SuaThongTinTamVang(TamVang tamvang)
+        {
+            string sqlStr = string.Format("UPDATE TAMVANG SET Ncdi = N'{0}', Ncden = N'{1}', Hoten = N'{2}', Ngaysinh = '{3}', NcCmnd = N'{5}', NgcCmnd = '{6}', " +
+                "DiaChitht = N'{7}', DiaChitt = N'{8}', Ngaydi = '{9}', Ngayve = '{10}', Lydo = N'{11}' WHERE Cmnd = '{4}'",
+                tamvang.noichuyendi, tamvang.noichyenden, tamvang.hovaten, tamvang.ngaysinh, tamvang.CMND, tamvang.noicapCMND, tamvang.ngaycapCMND,
+                tamvang.diachithuongtru, tamvang.diachitamtru, tamvang.ngaydi, tamvang.ngayve, tamvang.lydo);
+            dbc.Sql_Them_Xoa_Sua(sqlStr);
+        }
+
+        public void ThemThongTinKetHon(Cnkh cnkh)
+        {
+            string sqlStr = string.Format("INSERT INTO Cnkh(Hotenvo, NgaySinhvo, Dantocvo, Quoctichvo, Noicutruvo, Giaytotuythanvo, Hotenchong, NgaySinhchong, Dantocchong, Quoctichchong, Noicutruchong, Giaytotuythanchong, Noidk, Ngaydk) VALUES " +
+                " (N'{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}', N'{9}', N'{10}', N'{11}', N'{12}', N'{13}')",
+                cnkh.hotenvo, cnkh.ngaysinhvo, cnkh.dantocvo, cnkh.quoctichvo, cnkh.noicutruvo, cnkh.gtttvo, cnkh.hotenchong, cnkh.ngaysinhchong, cnkh.dantocchong, cnkh.quoctichchong, cnkh.noicutruchong, cnkh.gtttchong,
+                cnkh.noidkkh, cnkh.ngaydkkh);
+            dbc.Sql_Them_Xoa_Sua(sqlStr);
+        }
+        public void XoaThongTinKetHon(Cnkh cnkh)
+        {
+            string sqlStr = string.Format("DELETE FROM Cnkh Where HotenVo = N'{0}' AND HotenChong = N'{1}'",
+                cnkh.hotenvo, cnkh.hotenchong);
+            dbc.Sql_Them_Xoa_Sua(sqlStr);
+        }
+        public void SuaThongTinKetHon(Cnkh cnkh)
+        {
+            string sqlStr = string.Format("UPDATE Cnkh SET NgaySinhvo = N'{1}', Dantocvo = N'{2}', Quoctichvo = N'{3}', Noicutruvo = N'{4}', Giaytotuythanvo = N'{5}', NgaySinhchong = N'{7}', Dantocchong = N'{8}', Quoctichchong = N'{9}', Noicutruchong = N'{10}', Giaytotuythanchong = N'{11}', Noidk = N'{12}', Ngaydk = N'{13}' WHERE HoTenVo = N'{0}' AND HoTenChong = N'{6}'",
+                cnkh.hotenvo, cnkh.ngaysinhvo, cnkh.dantocvo, cnkh.quoctichvo, cnkh.noicutruvo, cnkh.gtttvo, cnkh.hotenchong, cnkh.ngaysinhchong, cnkh.dantocchong, cnkh.quoctichchong, cnkh.noicutruchong, cnkh.gtttchong,
+                cnkh.noidkkh, cnkh.ngaydkkh);
             dbc.Sql_Them_Xoa_Sua(sqlStr);
         }
     }
