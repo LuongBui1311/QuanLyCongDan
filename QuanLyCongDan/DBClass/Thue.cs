@@ -14,7 +14,7 @@ namespace QuanLyCongDan.DBClass
         private string soCMT_CCCD;
         private DateTime ngaythaydoithongtingannhat;
 
-        public string CMT_CCCD { get { return masothue; } }
+        public string Masothue { get { return masothue; } }
         public string Tenguoinopthue { get { return tenguoinopthue; } }
         public string Coquanthue { get { return coquanthue; } }
 

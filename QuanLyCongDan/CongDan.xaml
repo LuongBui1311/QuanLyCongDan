@@ -202,20 +202,20 @@
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
                             <WrapPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0 10 0 0">
-                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_thue_masothue" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Mã số thuế" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_thue_nguoinopthue" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Tên người nộp thuế" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_thue_coquanthue" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Cơ quan thuế" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_thue_cccd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Số CMT/CCCD" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày thay đổi thông tin gần nhất" Width="250"
+                                <DatePicker x:Name="dtp_thue_ngaythaydoi" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày thay đổi thông tin gần nhất" Width="250"
                                             BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
 
                                 </DatePicker>
                             </WrapPanel>
-                            <DataGrid Grid.Row="1" x:Name="dtg_Thue" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" Loaded="dtg_Thue_Loaded">
+                            <DataGrid Grid.Row="1" x:Name="dtg_Thue" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" Loaded="dtg_Thue_Loaded" SelectionChanged="dtg_Thue_SelectionChanged">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Binding="{Binding Masothue}" Width="*" Header="Mã số thuế"/>
                                     <DataGridTextColumn Binding="{Binding Tennguoinopthue}" Width="*" Header="Tên người nộp thuế"/>
@@ -225,23 +225,23 @@
                                 </DataGrid.Columns>
                             </DataGrid>
                             <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left">
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13" Click="btn_Them_ThongTin_Click">
+                                <Button x:Name="btn_Them_Thue" Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
+                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13" Click="btn_Them_Thue_Click">
                                     <StackPanel Orientation="Horizontal">
                                         <materialDesign:PackIcon Kind="Plus" VerticalAlignment="Center" Width="13" Height="13" Margin="0 1 8 0"/>
                                         <TextBlock Text="Thêm"/>
 
                                     </StackPanel>
                                 </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 0 0" FontSize="13" Click="btn_Xoa_ThongTin_Click">
+                                <Button x:Name="btn_Xoa_Thue" Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
+                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 0 0" FontSize="13" Click="btn_Xoa_Thue_Click">
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                         <materialDesign:PackIcon Kind="Delete" VerticalAlignment="Center" Margin="0 0 5 0"/>
                                         <TextBlock Text="Xóa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
                                     </StackPanel>
                                 </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13" Click="btn_Sua_ThongTin1_Click">
+                                <Button x:Name="btn_Sua_Thue" Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
+                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13" Click="btn_Sua_Thue_Click">
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                         <materialDesign:PackIcon Kind="AutoFix" VerticalAlignment="Center" Margin="0 0 5 0"/>
                                         <TextBlock Text="Sửa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
