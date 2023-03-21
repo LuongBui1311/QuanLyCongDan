@@ -117,3 +117,11 @@ C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\Qu
 C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\ref\QuanLyCongDan.dll
 C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\QuanLyDon.g.cs
 C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\QuanLyDon.baml
+C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\wDonTamTru.g.cs
+C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\wDonTamVang.g.cs
+C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\wGiayDKKetHon.g.cs
+C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\wDonTamTru.baml
+C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\wDonTamVang.baml
+C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\wGiayDKKetHon.baml
+C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\Setting.g.cs
+C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\Setting.baml

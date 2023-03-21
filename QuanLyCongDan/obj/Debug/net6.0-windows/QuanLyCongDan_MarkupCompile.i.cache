@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\App.xaml
-8-1782685031
+9502763766
 
-22-620328873
+23616012023
 1981069961377
-CongDan.xaml;login.xaml;MainWindow.xaml;QuanLyDon.xaml;SplashScreen.xaml;wDonTamTru.xaml;wDonTamVang.xaml;wGiayDKKetHon.xaml;
+CongDan.xaml;login.xaml;MainWindow.xaml;QuanLyDon.xaml;Setting.xaml;SplashScreen.xaml;wDonTamTru.xaml;wDonTamVang.xaml;wGiayDKKetHon.xaml;
 
-False
+True
 

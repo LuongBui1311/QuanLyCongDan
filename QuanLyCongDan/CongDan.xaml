@@ -24,49 +24,50 @@
                 <ColumnDefinition Width="*"/>
                 <!--<ColumnDefinition Width="250"/>-->
             </Grid.ColumnDefinitions>
-            <materialDesign:ColorZone Grid.Column="0" Height="700" CornerRadius="15 0 0 15" Background="White">
+            <Border Grid.Column="0" Height="700" CornerRadius="15 0 0 15" Background="{DynamicResource MaterialDesignLightSeparatorBackground}">
                 <StackPanel Margin="15">
                     <WrapPanel Margin="0 10 5 60" HorizontalAlignment="Center">
                         <Image RenderOptions.BitmapScalingMode="HighQuality" Source="/Images/Bản sao của logo_MFIT.png" Width="30" />
                         <TextBlock Text="Công dân" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0"/>
                     </WrapPanel>
-                    <Button x:Name="btn_TrangChu" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto"
+                    <Button x:Name="btn_TrangChu" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto"
                             Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btn_TrangChu_Click">
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="Home" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock Text="Trang chủ"/>
                         </WrapPanel>
                     </Button>
-                    <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto"
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto"
                             Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15">
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="People" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock Text="Công dân"/>
                         </WrapPanel>
                     </Button>
-                    <Button x:Name="btn_QuanLyDon" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto"
+                    <Button x:Name="btn_QuanLyDon" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto"
                             Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btn_QuanLyDon_Click">
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="FolderMedia" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock Text="Quản lý đơn"/>
                         </WrapPanel>
                     </Button>
-                    <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto"
-                            Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15">
-                        <WrapPanel Width="120">
-                            <materialDesign:PackIcon Kind="Settings" VerticalAlignment="Center" Margin="0 0 20 0"/>
-                            <TextBlock Text="Cài đặt"/>
-                        </WrapPanel>
-                    </Button>
-                    <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto"
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto"
                             Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15">
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="Help" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock Text="Trợ giúp"/>
                         </WrapPanel>
                     </Button>
+                    <StackPanel Orientation="Horizontal" Margin="10 0 10 15" VerticalAlignment="Center" Width="auto" Height="35">
+                        <materialDesign:PackIcon Kind="MoonAndStars" VerticalAlignment="Center" Margin="0 0 10 0"/>
+                        <TextBlock VerticalAlignment="Center" Text="Dark Mode" FontWeight="SemiBold"/>
+                        <ToggleButton Cursor="Hand" ToolTip="Enable Dark Mode" Margin="12 0 8 0"
+                                      x:Name="themeToggle" IsChecked="{Binding IsDarkTheme}"
+                                      Click="toggleTheme">
+                        </ToggleButton>
+                    </StackPanel>
 
-                    <materialDesign:ColorZone Mode="Custom" Background="AliceBlue" CornerRadius="15" Padding="25 0" Margin="0 120 0 0">
+                    <materialDesign:ColorZone Mode="Light" Background="AliceBlue" CornerRadius="15" Padding="25 0" Margin="0 170 0 0">
                         <StackPanel>
                             <Image RenderOptions.BitmapScalingMode="HighQuality" Source="/Images/Bản sao của logo_MFIT.png" Margin="0 -60 0 0" Height="100" Width="100" HorizontalAlignment="Center"/>
                             <TextBlock Foreground="DodgerBlue" FontSize="11" FontWeight="SemiBold" TextAlignment="Center"> Upgrade to <Bold FontWeight="Heavy">PRO</Bold> for<LineBreak/>more resources</TextBlock>
@@ -75,7 +76,7 @@
                         </StackPanel>
                     </materialDesign:ColorZone>
                 </StackPanel>
-            </materialDesign:ColorZone>
+            </Border>
             <Grid Grid.Column="1" Margin="30 12 0 0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
@@ -119,34 +120,34 @@
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
                             <WrapPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0 5 0 0">
-                                <TextBox x:Name="txt_tt_hoten" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_hoten" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Họ và tên" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_tt_gioitinh" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_gioitinh" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Giới tính" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
-                                <TextBox x:Name="txt_tt_cccd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="210" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_cccd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="210" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="CCCD" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
                                 <DatePicker x:Name="dtp_tt_ngaysinh" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày sinh" Width="150"
-                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
+                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="Transparent">
                                 </DatePicker>
-                                <TextBox x:Name="txt_tt_noisinh" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_noisinh" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Nơi sinh" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
-                                <TextBox x:Name="txt_tt_honnhan" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="95" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_honnhan" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="95" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Hôn nhân" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
-                                <TextBox x:Name="txt_tt_quoctich" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="95" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_quoctich" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="95" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Quốc tịch" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
-                                <TextBox x:Name="txt_tt_dantoc" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_dantoc" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Dân tộc" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
-                                <TextBox x:Name="txt_tt_tongiao" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_tongiao" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Tôn giáo" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
-                                <TextBox x:Name="txt_tt_thuongtru" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_thuongtru" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Thường trú" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
-                                <TextBox x:Name="txt_tt_quequan" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="150" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_quequan" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="150" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Quê quán" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
-                                <TextBox x:Name="txt_tt_diachi" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_diachi" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Địa chỉ" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
-                                <TextBox x:Name="txt_tt_sdt" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_sdt" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Số điện thoại" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
-                                <TextBox x:Name="txt_tt_email" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tt_email" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Email" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold"/>
                             </WrapPanel>
                             <DataGrid Grid.Row="1" x:Name="dtg_ThongTin" AutoGenerateColumns="False" CanUserAddRows="True" CanUserReorderColumns="False" Loaded="dtg_ThongTin_Loaded" SelectionChanged="dtg_ThongTin_SelectionChanged">
@@ -201,16 +202,16 @@
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
                             <WrapPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0 5 0 5" Width="840">
-                                <TextBox x:Name="txt_thue_masothue" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_thue_masothue" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Mã số thuế" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_thue_nguoinopthue" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_thue_nguoinopthue" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Tên người nộp thuế" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_thue_coquanthue" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_thue_coquanthue" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Cơ quan thuế" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_thue_cccd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_thue_cccd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Số CMT/CCCD" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                                 <DatePicker x:Name="dtp_thue_ngaythaydoi" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày thay đổi thông tin gần nhất" Width="250"
-                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
+                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="Transparent">
 
                                 </DatePicker>
                             </WrapPanel>
@@ -258,38 +259,38 @@
                             </Grid.RowDefinitions>
                             <WrapPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0 10 0 0">
                                 <DatePicker x:Name="dtp_tamtru_ngaydk" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày đăng kí" Width="150"
-                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
+                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="Transparent">
 
                                 </DatePicker>
-                                <TextBox x:Name="txt_tamtru_noidk" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamtru_noidk" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Nơi đăng kí" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_tamtru_hoten" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamtru_hoten" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Họ và tên" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                                 <DatePicker x:Name="dtp_tamtru_ngaysinh" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày sinh" Width="150"
-                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
+                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="Transparent" >
 
                                 </DatePicker>
-                                <TextBox x:Name="txt_tamtru_cccd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamtru_cccd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="CMND/CCCD" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_tamtru_noicapcccd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamtru_noicapcccd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Nơi cấp CMND/CCCD" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                                 <DatePicker x:Name="dtp_tamtru_ngaycapcccd" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày cấp CMND/CCCD" Width="150"
-                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
+                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="Transparent" >
 
                                 </DatePicker>
-                                <TextBox x:Name="txt_tamtru_diachitht" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamtru_diachitht" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Địa chỉ thường trú" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_tamtru_diachitt" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamtru_diachitt" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Địa chỉ tạm trú" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                                 <DatePicker x:Name="dtp_tamtru_ngayden" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày đến" Width="120"
-                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
+                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="Transparent" >
 
                                 </DatePicker>
                                 <DatePicker x:Name="dtp_tamtru_ngaydi" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày đi" Width="120"
-                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
+                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="Transparent" >
 
                                 </DatePicker>
-                                <TextBox x:Name="txt_tamtru_lydo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="250" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamtru_lydo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="250" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Lý do" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                             </WrapPanel>
                             <DataGrid Grid.Row="1" x:Name="dtg_Tamtru" Loaded="dtg_Tamtru_Loaded" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" SelectionChanged="dtg_Tamtru_SelectionChanged">
@@ -342,33 +343,33 @@
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
                             <WrapPanel Grid.Row="0" HorizontalAlignment="Left" Margin="5,10,0,1" >
-                                <TextBox x:Name="txt_tamvang_noichuyendi" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamvang_noichuyendi" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Nơi chuyển đi" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_tamvang_noichuyenden" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamvang_noichuyenden" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Nơi chuyển đến" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_tamvang_hoten" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamvang_hoten" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Họ và tên" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                                 <DatePicker x:Name="dtp_tamvang_ngaysinh" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày sinh" Width="150"
-                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
+                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="Transparent">
                                 </DatePicker>
-                                <TextBox x:Name="txt_tamvang_cmnd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamvang_cmnd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="CMND/CCCD" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_tamvang_noicapcmnd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamvang_noicapcmnd" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Nơi cấp CMND/CCCD" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                                 <DatePicker x:Name="dtp_tamvang_ngaycapcmnd" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày cấp CMND/CCCD" Width="150"
-                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
+                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="Transparent" >
                                 </DatePicker>
-                                <TextBox x:Name="txt_tamvang_diachithuongtru" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamvang_diachithuongtru" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Địa chỉ thường trú" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_tamvang_diachitamtru" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamvang_diachitamtru" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Địa chỉ tạm trú" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                                 <DatePicker x:Name="dtp_tamvang_ngaydi"  Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày đi" Width="120"
-                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
+                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="Transparent" >
                                 </DatePicker>
                                 <DatePicker x:Name="dtp_tamvang_ngayve" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày về" Width="120"
-                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
+                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="Transparent" >
                                 </DatePicker>
-                                <TextBox x:Name="txt_tamvang_lydo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="250" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_tamvang_lydo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="250" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Lí do" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                             </WrapPanel>
                             <DataGrid Grid.Row="1" x:Name="dtg_Tamvang" AutoGenerateColumns="False" CanUserAddRows="False" Loaded="dtg_Tamvang_Loaded" CanUserReorderColumns="False" SelectionChanged="dtg_Tamvang_SelectionChanged" >
@@ -421,36 +422,36 @@
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
                             <WrapPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0 10 0 0">
-                                <TextBox x:Name="txt_kethon_hotenvo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_kethon_hotenvo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Họ và tên vợ" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                                 <DatePicker x:Name="dtb_kethon_ngaysinhvo" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày sinh vợ" Width="150"
-                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
+                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="Transparent">
                                 </DatePicker>
-                                <TextBox x:Name="txt_kethon_dantocvo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_kethon_dantocvo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Dân tộc vợ" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_kethon_quoctichvo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_kethon_quoctichvo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Quốc tịch vợ" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_kethon_noicutruvo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="150" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_kethon_noicutruvo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="150" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Nơi cư trú của vợ" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_kethon_gtttvo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_kethon_gtttvo" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Giấy tờ tùy thân của vợ" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_kethon_hotenchong" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_kethon_hotenchong" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="200" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Họ và tên chồng" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                                 <DatePicker x:Name="dtb_kethon_ngaysinhchong" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày sinh chồng" Width="150"
-                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
+                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="Transparent">
                                 </DatePicker>
-                                <TextBox x:Name="txt_kethon_dantocchong" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_kethon_dantocchong" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Dân tộc chồng" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_kethon_quoctichchong" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_kethon_quoctichchong" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Quốc tịch chồng" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_kethon_noicutruchong" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="150" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_kethon_noicutruchong" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="150" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Nơi cư trú của chồng" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_kethon_gtttchong" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_kethon_gtttchong" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="100" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Giấy tờ tùy thân của chồng" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
-                                <TextBox x:Name="txt_kethon_noidkkethon" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="250" Background="White" Foreground="SlateGray" Margin="5 0 5 10"
+                                <TextBox x:Name="txt_kethon_noidkkethon" Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="auto" Width="250" Background="Transparent" Margin="5 0 5 10"
                                          materialDesign:HintAssist.Hint="Nơi đăng kí kết hôn" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" />
                                 <DatePicker x:Name="dtb_kethon_ngaydkkethon" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="5 0 5 10" materialDesign:HintAssist.Hint="Ngày đăng kí kết hôn" Width="200"
-                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="White" Foreground="SlateGray">
+                                            BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="10" FontWeight="SemiBold" Background="Transparent">
                                 </DatePicker>
                             </WrapPanel>
                             <DataGrid Grid.Row="1" x:Name="dtg_Cnkh" Loaded="dtg_Cnkh_Loaded" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" SelectionChanged="dtg_KetHon_SelectionChanged">
