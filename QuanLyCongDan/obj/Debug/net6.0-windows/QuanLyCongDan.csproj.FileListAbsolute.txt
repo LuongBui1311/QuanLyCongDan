@@ -123,5 +123,3 @@ C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\wG
 C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\wDonTamTru.baml
 C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\wDonTamVang.baml
 C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\wGiayDKKetHon.baml
-C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\Setting.g.cs
-C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\Setting.baml

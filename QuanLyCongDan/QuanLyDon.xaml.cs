@@ -45,13 +45,6 @@ namespace QuanLyCongDan
             Close();
             login.Show();
         }
-
-        private void btn_Setting_Click(object sender, RoutedEventArgs e)
-        {
-            Setting setting = new Setting();
-            setting.Show();
-            Close();
-        }
         public bool IsDarkTheme { get; set; }
         private readonly PaletteHelper paletteHelper = new PaletteHelper();
         private void toggleTheme(object sender, RoutedEventArgs e)
