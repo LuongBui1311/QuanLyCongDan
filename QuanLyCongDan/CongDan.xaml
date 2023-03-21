@@ -85,7 +85,7 @@
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
                 <DockPanel Grid.Row="0" Margin="0 12 5 0">
-                    <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" FontWeight="Bold" materialDesign:HintAssist.Hint="Tìm Kiếm"/>
+                    <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" FontWeight="Bold" materialDesign:HintAssist.Hint="Tìm Kiếm" KeyDown="SeachingDown"/>
                     <Button x:Name="btn_LogOut" Style="{StaticResource MaterialDesignIconButton}" materialDesign:RippleAssist.Feedback="LightPink" Foreground="LightCoral" materialDesign:ButtonAssist.CornerRadius="6" Height="40"
                             Width="40" DockPanel.Dock="Right" HorizontalAlignment="Right" Click="btn_LogOut_Click">
                         <materialDesign:PackIcon Kind="LogoutVariant"/>

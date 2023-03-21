@@ -290,6 +290,12 @@ namespace QuanLyCongDan
             dtg_Cnkh_Loaded(sender, e);
         }
 
-
+        private void SeachingDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                MessageBox.Show("Not found");
+            }
+        }
     }
 }
