@@ -64,12 +64,6 @@ namespace QuanLyCongDan
             qld.Show();
             Close();
         }
-        private void btn_Setting_Click(object sender, RoutedEventArgs e)
-        {
-            Setting setting = new Setting();
-            setting.Show();
-            Close();
-        }
         private void dtg_ThongTin_Loaded(object sender, RoutedEventArgs e)
         {
             cdDao.HienThiThongTin(dtg_ThongTin);
