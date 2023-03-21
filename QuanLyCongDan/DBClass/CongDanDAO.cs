@@ -125,21 +125,21 @@ namespace QuanLyCongDan.DBClass
         {
             string sqlStr = string.Format("INSERT INTO Cnkh(Hotenvo, NgaySinhvo, Dantocvo, Quoctichvo, Noicutruvo, Giaytotuythanvo, Hotenchong, NgaySinhchong, Dantocchong, Quoctichchong, Noicutruchong, Giaytotuythanchong, Noidk, Ngaydk) VALUES " +
                 " (N'{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}', N'{9}', N'{10}', N'{11}', N'{12}', N'{13}')",
-                cnkh.hotenvo, cnkh.ngaysinhvo, cnkh.dantocvo, cnkh.quoctichvo, cnkh.noicutruvo, cnkh.gtttvo, cnkh.hotenchong, cnkh.ngaysinhchong, cnkh.dantocchong, cnkh.quoctichchong, cnkh.noicutruchong, cnkh.gtttchong,
-                cnkh.noidkkh, cnkh.ngaydkkh);
+                cnkh.Hotenvo, cnkh.Ngaysinhvo, cnkh.Dantocvo, cnkh.Quoctichvo, cnkh.Noicutruvo, cnkh.Giaytotuythanvo, cnkh.Hotenchong, cnkh.Ngaysinhchong, cnkh.Dantocchong, cnkh.Quoctichchong, cnkh.Noicutruchong, cnkh.Giaytotuythanchong,
+                cnkh.Noidk, cnkh.Ngaydk);
             dbc.Sql_Them_Xoa_Sua(sqlStr);
         }
         public void XoaThongTinKetHon(Cnkh cnkh)
         {
             string sqlStr = string.Format("DELETE FROM Cnkh Where HotenVo = N'{0}' AND HotenChong = N'{1}'",
-                cnkh.hotenvo, cnkh.hotenchong);
+                cnkh.Hotenvo, cnkh.Hotenchong);
             dbc.Sql_Them_Xoa_Sua(sqlStr);
         }
         public void SuaThongTinKetHon(Cnkh cnkh)
         {
             string sqlStr = string.Format("UPDATE Cnkh SET NgaySinhvo = N'{1}', Dantocvo = N'{2}', Quoctichvo = N'{3}', Noicutruvo = N'{4}', Giaytotuythanvo = N'{5}', NgaySinhchong = N'{7}', Dantocchong = N'{8}', Quoctichchong = N'{9}', Noicutruchong = N'{10}', Giaytotuythanchong = N'{11}', Noidk = N'{12}', Ngaydk = N'{13}' WHERE HoTenVo = N'{0}' AND HoTenChong = N'{6}'",
-                cnkh.hotenvo, cnkh.ngaysinhvo, cnkh.dantocvo, cnkh.quoctichvo, cnkh.noicutruvo, cnkh.gtttvo, cnkh.hotenchong, cnkh.ngaysinhchong, cnkh.dantocchong, cnkh.quoctichchong, cnkh.noicutruchong, cnkh.gtttchong,
-                cnkh.noidkkh, cnkh.ngaydkkh);
+                cnkh.Hotenvo, cnkh.Ngaysinhvo, cnkh.Dantocvo, cnkh.Quoctichvo, cnkh.Noicutruvo, cnkh.Giaytotuythanvo, cnkh.Hotenchong, cnkh.Ngaysinhchong, cnkh.Dantocchong, cnkh.Quoctichchong, cnkh.Noicutruchong, cnkh.Giaytotuythanchong,
+                cnkh.Noidk, cnkh.Ngaydk);
             dbc.Sql_Them_Xoa_Sua(sqlStr);
         }
     }
