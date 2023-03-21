@@ -40,6 +40,12 @@ namespace QuanLyCongDan
             Close();
             mainWindow.Show();
         }
+        private void btn_QuanLyDon_Click(object sender, RoutedEventArgs e)
+        {
+            QuanLyDon qld = new QuanLyDon();
+            Close();
+            qld.Show();
+        }
         private void dtg_ThongTin_Loaded(object sender, RoutedEventArgs e)
         {
             cdDao.HienThiThongTin(dtg_ThongTin);
@@ -293,6 +299,6 @@ namespace QuanLyCongDan
                 txt_kethon_noicutruchong.Text, txt_kethon_gtttchong.Text, txt_kethon_noidkkethon.Text, Convert.ToDateTime(dtb_kethon_ngaydkkethon.Text.Trim()).Date);
             cdDao.SuaThongTinKetHon(cnkh);
             dtg_Cnkh_Loaded(sender, e);
-        }       
+        }
     }
 }

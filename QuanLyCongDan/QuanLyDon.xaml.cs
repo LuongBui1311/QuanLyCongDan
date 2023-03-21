@@ -23,5 +23,26 @@ namespace QuanLyCongDan
         {
             InitializeComponent();
         }
+
+        private void btn_TrangChu_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            Close();
+            mainWindow.Show();
+        }
+
+        private void btn_CongDan_Click(object sender, RoutedEventArgs e)
+        {
+            CongDan congDan = new CongDan();
+            Close();
+            congDan.Show();
+        }
+
+        private void btn_LogOut_Click(object sender, RoutedEventArgs e)
+        {
+            login login = new login();
+            Close();
+            login.Show();
+        }
     }
 }
