@@ -11,7 +11,7 @@
         Background="{x:Null}"
         AllowsTransparency="True"
         WindowStyle="None"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" MouseLeftButtonDown="Window_MouseLeftButtonDown">
     <materialDesign:Card Background="{DynamicResource MaterialDesignPaper}" UniformCornerRadius="15" Margin="25" materialDesign:ElevationAssist.Elevation="Dp4">
         <Grid>
             <Grid.ColumnDefinitions>

@@ -29,8 +29,8 @@ namespace QuanLyCongDan
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-            DangNhap user = new DangNhap(txtUsername.Text, txtPassword.Password);
-            dnDao.Login(user);
+            DangNhap admin = new DangNhap(txtUsername.Text, txtPassword.Password);
+            dnDao.Login(admin);
         }
 
         public bool IsDarkTheme { get; set; }
@@ -61,5 +61,6 @@ namespace QuanLyCongDan
             base.OnMouseLeftButtonDown(e);
             DragMove();
         }
+
     }
 }

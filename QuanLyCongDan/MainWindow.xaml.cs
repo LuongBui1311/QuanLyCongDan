@@ -26,7 +26,7 @@ namespace QuanLyCongDan
         {
             InitializeComponent();
         }
-        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             base.OnMouseLeftButtonDown(e);
             DragMove();
@@ -69,5 +69,6 @@ namespace QuanLyCongDan
             }
             paletteHelper.SetTheme(theme);
         }
+
     }
 }
