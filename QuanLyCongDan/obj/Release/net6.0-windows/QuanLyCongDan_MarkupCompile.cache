@@ -1,20 +1,20 @@
 ﻿QuanLyCongDan
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\
+C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Release\net6.0-windows\
 QuanLyCongDan
 none
 false
-TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\App.xaml
 4450730441
 
-18-1353480869
+17-139540709
 1981069961377
 CongDan.xaml;login.xaml;MainWindow.xaml;SplashScreen.xaml;
 
-False
+True
 
