@@ -199,43 +199,43 @@ namespace QuanLyCongDan
                 DataRowView rowView = (DataRowView)dtg_Tamvang.SelectedItem;
                 if (rowView != null)
                 {
-                    dtp_tamvang_noichuyendi.Text = rowView[0].ToString();
-                    dtp_tamvang_noichuyenden.Text = rowView[1].ToString();
-                    dtp_tamvang_hoten.Text = rowView[2].ToString();
+                    txt_tamvang_noichuyendi.Text = rowView[0].ToString();
+                    txt_tamvang_noichuyenden.Text = rowView[1].ToString();
+                    txt_tamvang_hoten.Text = rowView[2].ToString();
                     dtp_tamvang_ngaysinh.Text = rowView[3].ToString();
-                    dtp_tamvang_cmnd.Text = rowView[4].ToString();
-                    dtp_tamvang_noicapcmnd.Text = rowView[5].ToString();
+                    txt_tamvang_cmnd.Text = rowView[4].ToString();
+                    txt_tamvang_noicapcmnd.Text = rowView[5].ToString();
                     dtp_tamvang_ngaycapcmnd.Text = rowView[6].ToString();
-                    dtp_tamvang_diachithuongtru.Text = rowView[7].ToString();
-                    dtp_tamvang_diachitamtru.Text= rowView[8].ToString();
+                    txt_tamvang_diachithuongtru.Text = rowView[7].ToString();
+                    txt_tamvang_diachitamtru.Text= rowView[8].ToString();
                     dtp_tamvang_ngaydi.Text= rowView[9].ToString();
                     dtp_tamvang_ngayve.Text = rowView[10].ToString();
-                    dtp_tamvang_lydo.Text = rowView[11].ToString();
+                    txt_tamvang_lydo.Text = rowView[11].ToString();
                 }
             }
         }
 
         private void btn_Them_TamVang_Click(object sender, RoutedEventArgs e)
         {
-            TamVang tamvang = new TamVang(dtp_tamvang_noichuyendi.Text, dtp_tamvang_noichuyenden.Text, dtp_tamvang_hoten.Text, Convert.ToDateTime(dtp_tamvang_ngaysinh.Text.Trim()), dtp_tamvang_cmnd.Text,
-                dtp_tamvang_noicapcmnd.Text, Convert.ToDateTime(dtp_tamvang_ngaycapcmnd.Text.Trim()), dtp_tamvang_diachithuongtru.Text, dtp_tamvang_diachitamtru.Text,
-                Convert.ToDateTime(dtp_tamvang_ngaydi.Text.Trim()), Convert.ToDateTime(dtp_tamvang_ngayve.Text.Trim()), dtp_tamvang_lydo.Text);
+            TamVang tamvang = new TamVang(txt_tamvang_noichuyendi.Text, txt_tamvang_noichuyenden.Text, txt_tamvang_hoten.Text, Convert.ToDateTime(dtp_tamvang_ngaysinh.Text.Trim()), txt_tamvang_cmnd.Text,
+                txt_tamvang_noicapcmnd.Text, Convert.ToDateTime(dtp_tamvang_ngaycapcmnd.Text.Trim()), txt_tamvang_diachithuongtru.Text, txt_tamvang_diachitamtru.Text,
+                Convert.ToDateTime(dtp_tamvang_ngaydi.Text.Trim()), Convert.ToDateTime(dtp_tamvang_ngayve.Text.Trim()), txt_tamvang_lydo.Text);
             cdDao.ThemThongTinTamVang(tamvang);
             dtg_Tamvang_Loaded(sender, e);
         }
         private void btn_Xoa_TamVang_Click(object sender, RoutedEventArgs e)
         {
-            TamVang tamvang = new TamVang(dtp_tamvang_noichuyendi.Text, dtp_tamvang_noichuyenden.Text, dtp_tamvang_hoten.Text, Convert.ToDateTime(dtp_tamvang_ngaysinh.Text.Trim()), dtp_tamvang_cmnd.Text,
-                dtp_tamvang_noicapcmnd.Text, Convert.ToDateTime(dtp_tamvang_ngaycapcmnd.Text.Trim()), dtp_tamvang_diachithuongtru.Text, dtp_tamvang_diachitamtru.Text,
-                Convert.ToDateTime(dtp_tamvang_ngaydi.Text.Trim()), Convert.ToDateTime(dtp_tamvang_ngayve.Text.Trim()), dtp_tamvang_lydo.Text);
+            TamVang tamvang = new TamVang(txt_tamvang_noichuyendi.Text, txt_tamvang_noichuyenden.Text, txt_tamvang_hoten.Text, Convert.ToDateTime(dtp_tamvang_ngaysinh.Text.Trim()), txt_tamvang_cmnd.Text,
+                txt_tamvang_noicapcmnd.Text, Convert.ToDateTime(dtp_tamvang_ngaycapcmnd.Text.Trim()), txt_tamvang_diachithuongtru.Text, txt_tamvang_diachitamtru.Text,
+                Convert.ToDateTime(dtp_tamvang_ngaydi.Text.Trim()), Convert.ToDateTime(dtp_tamvang_ngayve.Text.Trim()), txt_tamvang_lydo.Text);
             cdDao.XoaThongTinTamVang(tamvang);
             dtg_Tamvang_Loaded(sender, e);
         }
         private void btn_Sua_TamVang_Click(object sender, RoutedEventArgs e)
         {
-            TamVang tamvang = new TamVang(dtp_tamvang_noichuyendi.Text, dtp_tamvang_noichuyenden.Text, dtp_tamvang_hoten.Text, Convert.ToDateTime(dtp_tamvang_ngaysinh.Text.Trim()), dtp_tamvang_cmnd.Text,
-                dtp_tamvang_noicapcmnd.Text, Convert.ToDateTime(dtp_tamvang_ngaycapcmnd.Text.Trim()), dtp_tamvang_diachithuongtru.Text, dtp_tamvang_diachitamtru.Text,
-                Convert.ToDateTime(dtp_tamvang_ngaydi.Text.Trim()), Convert.ToDateTime(dtp_tamvang_ngayve.Text.Trim()), dtp_tamvang_lydo.Text);
+            TamVang tamvang = new TamVang(txt_tamvang_noichuyendi.Text, txt_tamvang_noichuyenden.Text, txt_tamvang_hoten.Text, Convert.ToDateTime(dtp_tamvang_ngaysinh.Text.Trim()), txt_tamvang_cmnd.Text,
+                txt_tamvang_noicapcmnd.Text, Convert.ToDateTime(dtp_tamvang_ngaycapcmnd.Text.Trim()), txt_tamvang_diachithuongtru.Text, txt_tamvang_diachitamtru.Text,
+                Convert.ToDateTime(dtp_tamvang_ngaydi.Text.Trim()), Convert.ToDateTime(dtp_tamvang_ngayve.Text.Trim()), txt_tamvang_lydo.Text);
             cdDao.SuaThongTinTamVang(tamvang);
             dtg_Tamvang_Loaded(sender, e);
         }
@@ -247,19 +247,19 @@ namespace QuanLyCongDan
                 DataRowView rowView = (DataRowView)dtg_Cnkh.SelectedItem;
                 if (rowView != null)
                 {
-                    dtb_kethon_hotenvo.Text = rowView[0].ToString();
+                    txt_kethon_hotenvo.Text = rowView[0].ToString();
                     dtb_kethon_ngaysinhvo.Text = rowView[1].ToString();
-                    dtb_kethon_dantocvo.Text = rowView[2].ToString();
-                    dtb_kethon_quoctichvo.Text = rowView[3].ToString();
-                    dtb_kethon_noicutruvo.Text = rowView[4].ToString();
-                    dtb_kethon_gtttvo.Text = rowView[5].ToString();
-                    dtb_kethon_hotenchong.Text = rowView[6].ToString();
+                    txt_kethon_dantocvo.Text = rowView[2].ToString();
+                    txt_kethon_quoctichvo.Text = rowView[3].ToString();
+                    txt_kethon_noicutruvo.Text = rowView[4].ToString();
+                    txt_kethon_gtttvo.Text = rowView[5].ToString();
+                    txt_kethon_hotenchong.Text = rowView[6].ToString();
                     dtb_kethon_ngaysinhchong.Text = rowView[7].ToString();
-                    dtb_kethon_dantocchong.Text = rowView[8].ToString();
-                    dtb_kethon_quoctichchong.Text = rowView[9].ToString();
-                    dtb_kethon_noicutruchong.Text = rowView[10].ToString();
-                    dtb_kethon_gtttchong.Text = rowView[11].ToString();
-                    dtb_kethon_noidkkethon.Text = rowView[12].ToString();
+                    txt_kethon_dantocchong.Text = rowView[8].ToString();
+                    txt_kethon_quoctichchong.Text = rowView[9].ToString();
+                    txt_kethon_noicutruchong.Text = rowView[10].ToString();
+                    txt_kethon_gtttchong.Text = rowView[11].ToString();
+                    txt_kethon_noidkkethon.Text = rowView[12].ToString();
                     dtb_kethon_ngaydkkethon.Text = rowView[13].ToString();
                 }
             }
@@ -267,25 +267,25 @@ namespace QuanLyCongDan
 
         private void btn_Them_KetHon_Click(object sender, RoutedEventArgs e)
         {
-            Cnkh cnkh = new Cnkh(dtb_kethon_hotenvo.Text, dtb_kethon_ngaysinhvo.Text, dtb_kethon_dantocvo.Text, dtb_kethon_quoctichvo.Text, dtb_kethon_noicutruvo.Text,
-                dtb_kethon_gtttvo.Text, dtb_kethon_hotenchong.Text, dtb_kethon_ngaysinhchong.Text, dtb_kethon_dantocchong.Text, dtb_kethon_quoctichchong.Text,
-                dtb_kethon_noicutruchong.Text, dtb_kethon_gtttchong.Text, dtb_kethon_noidkkethon.Text, dtb_kethon_ngaydkkethon.Text);
+            Cnkh cnkh = new Cnkh(txt_kethon_hotenvo.Text, dtb_kethon_ngaysinhvo.Text, txt_kethon_dantocvo.Text, txt_kethon_quoctichvo.Text, txt_kethon_noicutruvo.Text,
+                txt_kethon_gtttvo.Text, txt_kethon_hotenchong.Text, dtb_kethon_ngaysinhchong.Text, txt_kethon_dantocchong.Text, txt_kethon_quoctichchong.Text,
+                txt_kethon_noicutruchong.Text, txt_kethon_gtttchong.Text, txt_kethon_noidkkethon.Text, Convert.ToDateTime(dtb_kethon_ngaydkkethon.Text.Trim()).Date);
             cdDao.ThemThongTinKetHon(cnkh);
             dtg_Cnkh_Loaded(sender, e);
         }
         private void btn_Xoa_KetHon_Click(object sender, RoutedEventArgs e)
         {
-            Cnkh cnkh = new Cnkh(dtb_kethon_hotenvo.Text, dtb_kethon_ngaysinhvo.Text, dtb_kethon_dantocvo.Text, dtb_kethon_quoctichvo.Text, dtb_kethon_noicutruvo.Text,
-                dtb_kethon_gtttvo.Text, dtb_kethon_hotenchong.Text, dtb_kethon_ngaysinhchong.Text, dtb_kethon_dantocchong.Text, dtb_kethon_quoctichchong.Text,
-                dtb_kethon_noicutruchong.Text, dtb_kethon_gtttchong.Text, dtb_kethon_noidkkethon.Text, dtb_kethon_ngaydkkethon.Text);
+            Cnkh cnkh = new Cnkh(txt_kethon_hotenvo.Text, dtb_kethon_ngaysinhvo.Text, txt_kethon_dantocvo.Text, txt_kethon_quoctichvo.Text, txt_kethon_noicutruvo.Text,
+                txt_kethon_gtttvo.Text, txt_kethon_hotenchong.Text, dtb_kethon_ngaysinhchong.Text, txt_kethon_dantocchong.Text, txt_kethon_quoctichchong.Text,
+                txt_kethon_noicutruchong.Text, txt_kethon_gtttchong.Text, txt_kethon_noidkkethon.Text, Convert.ToDateTime(dtb_kethon_ngaydkkethon.Text.Trim()).Date);
             cdDao.XoaThongTinKetHon(cnkh);
             dtg_Cnkh_Loaded(sender, e);
         }
         private void btn_Sua_KetHon_Click(object sender, RoutedEventArgs e)
         {
-            Cnkh cnkh = new Cnkh(dtb_kethon_hotenvo.Text, dtb_kethon_ngaysinhvo.Text, dtb_kethon_dantocvo.Text, dtb_kethon_quoctichvo.Text, dtb_kethon_noicutruvo.Text,
-                dtb_kethon_gtttvo.Text, dtb_kethon_hotenchong.Text, dtb_kethon_ngaysinhchong.Text, dtb_kethon_dantocchong.Text, dtb_kethon_quoctichchong.Text,
-                dtb_kethon_noicutruchong.Text, dtb_kethon_gtttchong.Text, dtb_kethon_noidkkethon.Text, dtb_kethon_ngaydkkethon.Text);
+            Cnkh cnkh = new Cnkh(txt_kethon_hotenvo.Text, dtb_kethon_ngaysinhvo.Text, txt_kethon_dantocvo.Text, txt_kethon_quoctichvo.Text, txt_kethon_noicutruvo.Text, 
+                txt_kethon_gtttvo.Text, txt_kethon_hotenchong.Text, dtb_kethon_ngaysinhchong.Text, txt_kethon_dantocchong.Text, txt_kethon_quoctichchong.Text, 
+                txt_kethon_noicutruchong.Text, txt_kethon_gtttchong.Text, txt_kethon_noidkkethon.Text, Convert.ToDateTime(dtb_kethon_ngaydkkethon.Text.Trim()).Date);
             cdDao.SuaThongTinKetHon(cnkh);
             dtg_Cnkh_Loaded(sender, e);
         }
