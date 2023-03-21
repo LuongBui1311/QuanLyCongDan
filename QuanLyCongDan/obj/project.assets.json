@@ -610,19 +610,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ACER\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ACER\\Source\\Repos\\QuanLyCongDan\\QuanLyCongDan\\QuanLyCongDan.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Source\\Repos\\QuanLyCongDan\\QuanLyCongDan\\QuanLyCongDan.csproj",
       "projectName": "QuanLyCongDan",
-      "projectPath": "C:\\Users\\ACER\\Source\\Repos\\QuanLyCongDan\\QuanLyCongDan\\QuanLyCongDan.csproj",
-      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ACER\\Source\\Repos\\QuanLyCongDan\\QuanLyCongDan\\obj\\",
+      "projectPath": "C:\\Users\\HP\\Source\\Repos\\QuanLyCongDan\\QuanLyCongDan\\QuanLyCongDan.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP\\Source\\Repos\\QuanLyCongDan\\QuanLyCongDan\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -676,7 +676,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

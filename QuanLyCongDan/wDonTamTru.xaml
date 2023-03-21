@@ -1,0 +1,25 @@
+﻿<Window x:Class="QuanLyCongDan.wDonTamTru"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLyCongDan"
+        mc:Ignorable="d"
+        Title="wDonTamTru" Height="822" Width="575">
+    <Grid>
+        <Image Source="Images/don-xin-xac-nhan-tam-tru-tam-vang.jpg"/>
+        <TextBox x:Name="txtngdk" HorizontalAlignment="Left" Margin="420,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderBrush="#00000000"/>
+        <TextBox x:Name="txtnoidk" HorizontalAlignment="Left" Margin="316,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Background="{x:Null}" BorderBrush="#00000000"/>
+        <TextBox x:Name="txthoten" HorizontalAlignment="Left" Margin="157,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Background="{x:Null}" BorderBrush="#00000000"/>
+        <TextBox x:Name="txtngaysinh" HorizontalAlignment="Left" Margin="157,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Background="{x:Null}" BorderBrush="#00000000"/>
+        <TextBox x:Name="txtCmnd" HorizontalAlignment="Left" Margin="147,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" Background="{x:Null}" BorderBrush="#00000000" Height="20"/>
+        <TextBox x:Name="txtnccmnd" HorizontalAlignment="Left" Margin="288,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68" Background="{x:Null}" BorderBrush="#00000000" Height="20"/>
+        <TextBox x:Name="txtngccmnd" HorizontalAlignment="Left" Margin="446,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68" Background="{x:Null}" BorderBrush="#00000000" Height="20"/>
+        <TextBox x:Name="txtdiachitht" HorizontalAlignment="Left" Margin="204,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" Background="{x:Null}" BorderBrush="#00000000" Height="20"/>
+        <TextBox x:Name="txtnoidk2" HorizontalAlignment="Left" Margin="416,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" Background="{x:Null}" BorderBrush="#00000000" Height="20"/>
+        <TextBox x:Name="txtdiachitt" HorizontalAlignment="Left" Margin="302,352,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" Background="{x:Null}" BorderBrush="#00000000" Height="20"/>
+        <TextBox x:Name="txtngayden" HorizontalAlignment="Left" Margin="132,383,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Background="{x:Null}" BorderBrush="#00000000" Height="20"/>
+        <TextBox x:Name="txtngaydi" HorizontalAlignment="Left" Margin="288,383,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Background="{x:Null}" BorderBrush="#00000000" Height="20"/>
+        <TextBox x:Name="txtlydo" HorizontalAlignment="Left" Margin="132,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Background="{x:Null}" BorderBrush="#00000000" Height="20"/>
+    </Grid>
+</Window>

@@ -1,4 +1,5 @@
 ﻿using MaterialDesignColors;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,8 +42,33 @@ namespace QuanLyCongDan
         private void btn_CongDan_Click(object sender, RoutedEventArgs e)
         {
             CongDan congDan = new CongDan();
-            Close();
             congDan.Show();
+            Close();
+        }
+
+        private void btn_QuanLyDon_Click(object sender, RoutedEventArgs e)
+        {
+            QuanLyDon qld = new QuanLyDon();
+            qld.Show();
+            Close();
+        }
+        public bool IsDarkTheme { get; set; }
+        private readonly PaletteHelper paletteHelper = new PaletteHelper();
+        private void toggleTheme(object sender, RoutedEventArgs e)
+        {
+            ITheme theme = paletteHelper.GetTheme();
+
+            if (IsDarkTheme = theme.GetBaseTheme() == BaseTheme.Dark)
+            {
+                IsDarkTheme = false;
+                theme.SetBaseTheme(Theme.Light);
+            }
+            else
+            {
+                IsDarkTheme = true;
+                theme.SetBaseTheme(Theme.Dark);
+            }
+            paletteHelper.SetTheme(theme);
         }
 
     }
