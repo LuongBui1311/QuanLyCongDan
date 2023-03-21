@@ -60,7 +60,10 @@ namespace QuanLyCongDan.DBClass
                 congDan.HoTen, congDan.GioiTinh, congDan.NgaySinh, congDan.NoiSinh, congDan.TinhTrangHonNhan, congDan.QuocTich, congDan.DanToc, congDan.TonGiao, congDan.ThuongTru, congDan.QueQuan, congDan.DiaChi, congDan.SDT, congDan.Email, congDan.CCCD);
             dbc.Sql_Them_Xoa_Sua(sqlStr);
         }
-
+        public void TraCuuThongTinCongDan(ThongTinCongDan congDan, DataGrid dataGrid)
+        {
+            
+        }
         public void ThemThongTinThue(Thue ttThue)
         {
             string sqlStr = string.Format("INSERT INTO Thue(Masothue, Tennguoinopthue, Coquanthue, SoCMT_CCCD, Ngaythaydoithongtingannhat) VALUES " +
