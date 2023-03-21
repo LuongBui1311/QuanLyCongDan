@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MaterialDesignThemes.Wpf;
 using QuanLyCongDan.DBClass;
 
 namespace QuanLyCongDan
@@ -27,7 +28,24 @@ namespace QuanLyCongDan
         {
             InitializeComponent();
         }
+        public bool IsDarkTheme { get; set; }
+        private readonly PaletteHelper paletteHelper = new PaletteHelper();
+        private void toggleTheme(object sender, RoutedEventArgs e)
+        {
+            ITheme theme = paletteHelper.GetTheme();
 
+            if (IsDarkTheme = theme.GetBaseTheme() == BaseTheme.Dark)
+            {
+                IsDarkTheme = false;
+                theme.SetBaseTheme(Theme.Light);
+            }
+            else
+            {
+                IsDarkTheme = true;
+                theme.SetBaseTheme(Theme.Dark);
+            }
+            paletteHelper.SetTheme(theme);
+        }
         private void btn_LogOut_Click(object sender, RoutedEventArgs e)
         {
             login logIn = new login();
@@ -37,14 +55,20 @@ namespace QuanLyCongDan
         private void btn_TrangChu_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
-            Close();
             mainWindow.Show();
+            Close();
         }
         private void btn_QuanLyDon_Click(object sender, RoutedEventArgs e)
         {
             QuanLyDon qld = new QuanLyDon();
-            Close();
             qld.Show();
+            Close();
+        }
+        private void btn_Setting_Click(object sender, RoutedEventArgs e)
+        {
+            Setting setting = new Setting();
+            setting.Show();
+            Close();
         }
         private void dtg_ThongTin_Loaded(object sender, RoutedEventArgs e)
         {
@@ -300,5 +324,6 @@ namespace QuanLyCongDan
             cdDao.SuaThongTinKetHon(cnkh);
             dtg_Cnkh_Loaded(sender, e);
         }
+        
     }
 }
