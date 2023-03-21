@@ -10,7 +10,10 @@
   <ItemGroup>
     <None Remove="Images\11525709_4776016.jpg" />
     <None Remove="Images\Bản sao của logo_MFIT.png" />
+    <None Remove="Images\don-xin-xac-nhan-tam-tru-tam-vang.jpg" />
+    <None Remove="Images\giay-ket-hon-1.jpg" />
     <None Remove="Images\Screenshot_20221028_025259.png" />
+    <None Remove="Images\TAMVANG.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,7 +45,10 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Bản sao của logo_MFIT.png" />
+    <Resource Include="Images\don-xin-xac-nhan-tam-tru-tam-vang.jpg" />
+    <Resource Include="Images\giay-ket-hon-1.jpg" />
     <Resource Include="Images\Screenshot_20221028_025259.png" />
+    <Resource Include="Images\TAMVANG.jpg" />
   </ItemGroup>
 
 </Project>
