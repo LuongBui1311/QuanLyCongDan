@@ -43,5 +43,12 @@ namespace QuanLyCongDan
             Close();
             congDan.Show();
         }
+
+        private void btn_QuanLyDon_Click(object sender, RoutedEventArgs e)
+        {
+            QuanLyDon qld = new QuanLyDon();
+            Close();
+            qld.Show();
+        }
     }
 }

@@ -44,8 +44,8 @@
                             <TextBlock Text="Công dân"/>
                         </WrapPanel>
                     </Button>
-                    <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto"
-                            Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15">
+                    <Button x:Name="btn_QuanLyDon" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto"
+                            Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btn_QuanLyDon_Click">
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="FolderMedia" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock Text="Quản lý đơn"/>

@@ -115,3 +115,5 @@ C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\Qu
 C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\QuanLyCongDan.csproj.CopyComplete
 C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\QuanLyCongDan.genruntimeconfig.cache
 C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\ref\QuanLyCongDan.dll
+C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\QuanLyDon.g.cs
+C:\Users\HP\source\repos\QuanLyCongDan\QuanLyCongDan\obj\Debug\net6.0-windows\QuanLyDon.baml
