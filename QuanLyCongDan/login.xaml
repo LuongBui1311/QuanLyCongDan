@@ -38,7 +38,7 @@
 
                 </materialDesign:PopupBox>
 
-                <Image Margin="0 60 0 5" Source="/Images/Bản sao của logo_MFIT.png" Height="100"/>
+                <Image Margin="0 50 0 5" Source="/Images/Bản sao của logo_MFIT.png" Height="100"/>
 
                 <TextBlock Margin="0 25 0 5" HorizontalAlignment="Center" FontSize="28"
                            FontWeight="Bold" Text="Welcome Back!"/>

@@ -680,7 +680,7 @@ namespace QuanLyCongDan {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/QuanLyCongDan;component/congdan.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/QuanLyCongDan;V1.0.0.0;component/congdan.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CongDan.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

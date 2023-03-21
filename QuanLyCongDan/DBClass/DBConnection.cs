@@ -14,24 +14,33 @@ namespace QuanLyCongDan.DBClass
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
 
-        public DataTable KetQuaDangNhap (string sqlStr)
+        public int KetQuaDangNhap (string sqlStr)
         {
-            DataTable dataTable = new DataTable();
+            int state = 0;
             try
             {
-         
                 conn.Open();
 
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 SqlDataReader dataReader = cmd.ExecuteReader();
-                dataTable.Load(dataReader);
+                if (dataReader.Read())
+                {
+                    if (Convert.ToString(dataReader["Quyen"]) == "ADMIN")
+                    {
+                        state = 1;
+                    } 
+                    else
+                    {
+                        state = 2;
+                    }
+                }
                 conn.Close();                
             }
             catch
             {
                 MessageBox.Show("Kết nối không thành công.");
             }
-            return dataTable;
+            return state;
         }
         public DataTable Sql_Select(string sqlStr)
         {

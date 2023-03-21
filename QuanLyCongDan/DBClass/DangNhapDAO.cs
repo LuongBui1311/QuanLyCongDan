@@ -13,17 +13,25 @@ namespace QuanLyCongDan.DBClass
         public void Login(DangNhap user)
         {
             string sqlStr = string.Format("SELECT *FROM DangNhap WHERE TenDangNhap = '{0}' AND MatKhau = '{1}'", user.Username, user.Password);
-            if (dbc.KetQuaDangNhap(sqlStr).Rows.Count > 0)
+            if (dbc.KetQuaDangNhap(sqlStr) == 1)   
             {
                 login login = new login();
-                MainWindow mainWindow = new MainWindow();
                 login.Close();
+                MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
+
             }
-            else
+            if (dbc.KetQuaDangNhap(sqlStr)  == 2)
+            {
+                login login = new login();
+                login.Close();
+                User_TrangChu utc = new User_TrangChu();
+                utc.Show();
+            }
+            if (dbc.KetQuaDangNhap(sqlStr) == 0)
             {
                 MessageBox.Show("Vui lòng kiểm tra lại thông tin!");
-            }
+            }    
         }
     }
 }

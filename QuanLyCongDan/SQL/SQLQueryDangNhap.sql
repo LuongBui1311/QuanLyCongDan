@@ -10,6 +10,8 @@ insert into DangNhap values
 ('USER', '092174003985', '4031979'),
 ('USER', '075204126282', '2512004')
 
+insert into DangNhap values('USER', 'user12345', '123456')
+
 select *from DangNhap
 select *from CongDan
 select *from Cnkh
