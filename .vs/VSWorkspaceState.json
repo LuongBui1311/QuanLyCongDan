@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\QuanLyCongDan",
+    "\\QuanLyCongDan\\DBClass"
   ],
-  "SelectedNode": "\\QuanLyCongDan.sln",
+  "SelectedNode": "\\QuanLyCongDan\\DBClass\\CongDanDAO.cs",
   "PreviewInSolutionExplorer": false
 }
