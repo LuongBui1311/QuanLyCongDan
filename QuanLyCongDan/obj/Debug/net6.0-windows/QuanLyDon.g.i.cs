@@ -96,7 +96,7 @@ namespace QuanLyCongDan {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/QuanLyCongDan;V1.0.0.0;component/quanlydon.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/QuanLyCongDan;component/quanlydon.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\QuanLyDon.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

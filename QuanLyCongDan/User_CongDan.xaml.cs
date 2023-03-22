@@ -72,5 +72,25 @@ namespace QuanLyCongDan
         {
             wrp_User_ThongTin.Visibility = Visibility.Visible;
         }
+
+        private void btn_User_TraCuu_Thue_Click(object sender, RoutedEventArgs e)
+        {
+            wrp_User_Thue.Visibility = Visibility.Visible;
+        }
+
+        private void btn_User_TraCuu_TamTru_Click(object sender, RoutedEventArgs e)
+        {
+            wrp_User_TamTru.Visibility = Visibility.Visible;
+        }
+
+        private void btn_User_TraCuu_TamVang_Click(object sender, RoutedEventArgs e)
+        {
+            wrp_User_TamVang.Visibility = Visibility.Visible;
+        }
+
+        private void btn_User_TraCuu_HonNhan_Click(object sender, RoutedEventArgs e)
+        {
+            wrp_User_HonNhan.Visibility = Visibility.Visible;
+        }
     }
 }

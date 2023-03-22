@@ -157,7 +157,7 @@ namespace QuanLyCongDan {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/QuanLyCongDan;V1.0.0.0;component/wdontamtru.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/QuanLyCongDan;component/wdontamtru.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\wDonTamTru.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
