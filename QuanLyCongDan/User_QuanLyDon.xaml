@@ -96,10 +96,13 @@
                 </DockPanel>
                 <TextBlock Grid.Row="1" Text="Quản lý đơn từ" FontSize="32" FontWeight="SemiBold" Margin="20 0 0 0"/>
                 <TabControl Grid.Row="2" IsSynchronizedWithCurrentItem="True" Style="{StaticResource MaterialDesignUniformTabControl}" Margin="0 5 10 5">
-                    <TabItem Header="Xem đơn từ" Width="auto" Height="45">
+                    <TabItem Header="Đơn đã duyệt" Width="auto" Height="45">
 
                     </TabItem>
-                    <TabItem Header="Duyệt đơn từ" Width="auto" Height="45">
+                    <TabItem Header="Đơn chưa duyệt" Width="auto" Height="45">
+
+                    </TabItem>
+                    <TabItem Header="Đăng kí mới" Width="auto" Height="45">
 
                     </TabItem>
                 </TabControl>
