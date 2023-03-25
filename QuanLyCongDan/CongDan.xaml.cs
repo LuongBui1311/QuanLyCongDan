@@ -23,7 +23,9 @@ namespace QuanLyCongDan
     /// </summary>
     public partial class CongDan : Window
     {
+        DBConnection dbc = new DBConnection();
         CongDanDAO cdDao = new CongDanDAO();
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public CongDan()
         {
             InitializeComponent();
@@ -88,6 +90,27 @@ namespace QuanLyCongDan
         {
             cdDao.HienThiHonNhan(dtg_Cnkh);
         }
+
+        //private void btn_TraCuu_ThongTin_Click(object sender, RoutedEventArgs e)
+        //{
+        //    DataTable dataTable = new DataTable();
+        //    try
+        //    {
+        //        conn.Open();
+
+        //        string sqlStr = string.Format();
+        //        SqlCommand cmd = new SqlCommand(sqlStr, conn);
+        //        SqlDataReader dataReader = cmd.ExecuteReader();
+        //        dataTable.Load(dataReader);
+        //        conn.Close();
+        //    }
+        //    catch
+        //    {
+        //        MessageBox.Show("Lỗi!");
+        //    }
+        //    return dataTable;
+
+        //}
         private void btn_Them_ThongTin_Click(object sender, RoutedEventArgs e)
         {
             ThongTinCongDan congDan = new ThongTinCongDan(txt_tt_hoten.Text, txt_tt_gioitinh.Text, txt_tt_cccd.Text, Convert.ToDateTime(dtp_tt_ngaysinh.Text.Trim()).Date, txt_tt_noisinh.Text, txt_tt_honnhan.Text, txt_tt_quoctich.Text,
@@ -318,17 +341,16 @@ namespace QuanLyCongDan
             cdDao.SuaThongTinKetHon(cnkh);
             dtg_Cnkh_Loaded(sender, e);
         }
-<<<<<<< HEAD
 
-        private void SeachingDown(object sender, KeyEventArgs e)
+        private void Keyword_Changed(object sender, RoutedEventArgs e)
         {
-            if (e.Key == Key.Return)
-            {
-                MessageBox.Show("Not found");
-            }
+            cdDao.search(dtg_ThongTin, "CONGDAN", "Hoten", txt_keyword.Text);
         }
-=======
-        
->>>>>>> 9d56c9572d51cb582001617701b9d776d3d233da
+
+
+        private void SeachingClick(object sender, RoutedEventArgs e)
+        {
+            cdDao.search(dtg_ThongTin, "CONGDAN", "Hoten", txt_keyword.Text);
+        }
     }
 }
